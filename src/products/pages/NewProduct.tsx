@@ -5,7 +5,7 @@ export const NewProduct = () => {
   
 
   return (
-    <div className="w-full flex-col">
+    <div className="w-full flex-col border-2 border-gray-400">
       <h1 className="text-2xl font-bold">Nuevo producto</h1>
 
       <form className="w-full">
