@@ -27,7 +27,7 @@ export const getProducts = async ({
 export const getProductById = async (id: number): Promise<Product> => {
   //SI no se proporciona el filterKey su valor es undefined
   //console.log({filterKey})
-  await sleep(2);
+  await sleep(5);
   const { data } = await productsApi.get<Product>(`/products/${id}`);
   return data;
 };
@@ -39,7 +39,7 @@ interface ProductLike {
   image: string;
 }
 export const createProduct = async (product: ProductLike) => {
-  await sleep(2);
+  await sleep(5);
 
   //throw new Error(`Error al crear producto`)
   const { data } = await productsApi.post<Product>(`/products`, product);

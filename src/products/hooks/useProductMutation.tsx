@@ -76,7 +76,7 @@ export const useProductMutation = () => {
         ["products", { filterKey: variables.category }],
         (oldList) => {
           if (!oldList) return [];
-
+          //!Removemos el producto optimista de la lista
           return oldList.filter((cacheProduct) => {
             return cacheProduct.id !== context?.optimisticProduct.id;
           });
